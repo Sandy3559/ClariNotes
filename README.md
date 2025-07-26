@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ClariNotes
 
-## Getting Started
+ClariNotes is a modern web application designed to simplify and enhance the note-taking experience for musicians, students, and educators. Built with cutting-edge web technologies, it offers a clean interface, responsive design, and seamless performance.
 
-First, run the development server:
+## 🚀 Features
 
+- 🎼 Intuitive note-taking interface
+- 🧠 Smart organization of notes
+- 🌙 Dark mode support
+- 📱 Fully responsive across devices
+- ⚡ Fast performance with serverless backend
+- 🔐 Secure user authentication
+
+## 🛠️ Technologies Used
+
+- **Next.js** – React-based framework for fast and scalable web apps
+- **Convex** – Backend-as-a-service for real-time data and serverless functions
+- **Tailwind CSS** – Utility-first CSS framework for styling
+- **Geist Font** – Optimized font loading via `next/font`
+- **Vercel** – Deployment platform for frontend apps
+
+---
+
+## 🧑‍💻 Getting Started
+
+Follow these steps to clone and run ClariNotes locally:
+
+### 1. 📦 Prerequisites
+
+Ensure you have the following installed:
+
+- **Node.js** (v18 or higher recommended)  
+  Install via [Node.js official site](https://nodejs.org) or use command:
+  ```bash
+  sudo apt install nodejs
+  sudo apt install npm
+  sudo apt install git
+  npm install -g convex
+
+### 2. 📁 Clone the Repository
+  ```bash
+  git clone https://github.com/Sandy3559/ClariNotes.git
+  cd ClariNotes
+  ```
+### 3. 📂 Install Dependencies
+  ```bash
+  npm install
+  ```
+### 4. ⚙️ Set Up Convex
+
+If you're using Convex for backend:<br>
+Create a Convex project:
+```bash
+  npx convex init
+```
+Follow prompts to link your project and configure .env.local with your Convex deployment URL.
+
+### 5. 🧪 Run the Development Server
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+Open http://localhost:3000 in your browser to view the app.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Live Demo
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+ClariNotes [Live on Vercel](https://clari-notes.vercel.app/)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
