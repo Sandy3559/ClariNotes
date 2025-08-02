@@ -29,6 +29,9 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
+import { Document, Packer, Paragraph } from "docx";
+import { saveAs } from "file-saver";
+
 
 function EditorExtension({ editor, fileName = "MyDocument" }) {
   const { fileId } = useParams();
@@ -61,6 +64,21 @@ function EditorExtension({ editor, fileName = "MyDocument" }) {
 
     html2pdf().from(container).set(options).save();
   };*/
+
+  const generateDocx = () => {
+        const content = editor.getText();
+        const doc = new Document({
+            sections: [
+                {
+                    children: [new Paragraph(content)],
+                },
+            ],
+        });
+
+        Packer.toBlob(doc).then((blob) => {
+            saveAs(blob, "document.docx");
+        });
+    };
 
   const onAiClick = async () => {
     toast("AI is getting your answer....");
@@ -229,7 +247,7 @@ function EditorExtension({ editor, fileName = "MyDocument" }) {
             </button>
 
             <button
-            //onClick={handleDownloadPdf}
+            onClick={generateDocx}
             >
               <LucideDownload />
             </button>
